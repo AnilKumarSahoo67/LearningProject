@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/black"
+    app:cardElevation="0dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    style="@style/MaterialCardThemeNormal"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgUserProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_round_person_24"
+            app:layout_constraintBottom_toTopOf="@+id/txtTagLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <TextView
+            android:id="@+id/txtUserName"
+            style="@style/NormalTextView"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@id/imgUserProfile"
+            app:layout_constraintStart_toEndOf="@+id/imgUserProfile"
+            app:layout_constraintTop_toTopOf="@id/imgUserProfile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTagLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:ems="3"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="kcjank jnkadnv kajvn davnav lanln vlan lanvlv nvldn kcd sa ckc"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtComment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtComment"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgUserProfile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="3"
+            android:padding="5dp"
+            android:text="kcjan kbkbkbkbknvlv nvldn kcd smclknclncss lkcsalkncklnacl lcsnlkncalkn lkacnslknals sa ckc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtTagLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTagLine" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageLike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_outline_thumb_up_24"
+            android:tint="#707070"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTotalLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="450"
+            app:layout_constraintBottom_toBottomOf="@id/imageLike"
+            app:layout_constraintStart_toEndOf="@+id/imageLike"
+            app:layout_constraintTop_toTopOf="@id/imageLike" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageDislike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_outline_thumb_down_24"
+            android:tint="#707070"
+            app:layout_constraintBottom_toBottomOf="@id/txtTotalLike"
+            app:layout_constraintStart_toEndOf="@+id/txtTotalLike"
+            app:layout_constraintTop_toTopOf="@id/txtTotalLike" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTotalDislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="20"
+            app:layout_constraintBottom_toBottomOf="@id/imageDislike"
+            app:layout_constraintStart_toEndOf="@+id/imageDislike"
+            app:layout_constraintTop_toTopOf="@id/imageDislike" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageOption"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:tint="#707070"
+            app:layout_constraintBottom_toBottomOf="@id/txtTotalLike"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtTotalLike" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCommentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="14 days ago"
+            app:layout_constraintBottom_toBottomOf="@id/imageDislike"
+            app:layout_constraintEnd_toStartOf="@+id/imageOption"
+            app:layout_constraintTop_toTopOf="@id/imageDislike" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtLikePercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="78%"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgUserProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgUserProfile" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/like"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_round_favorite_24"
+            android:tint="@color/orange"
+            app:layout_constraintBottom_toBottomOf="@id/imgUserProfile"
+            app:layout_constraintEnd_toStartOf="@+id/txtLikePercentage"
+            app:layout_constraintTop_toTopOf="@id/imgUserProfile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

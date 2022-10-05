@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LearningProject</string>
+    <string name="backbutton">backButton</string>
+    <string name="sharebutton">ShareButton</string>
+    <string name="like_image">LikeImage</string>
+    <string name="add_your_rating_reviews"><![CDATA[Add your rating & reviews]]></string>
+    <string name="your_ratings_matter">Your ratings matter</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_onboarding_1">Welcome to Jatra Jagat App !</string>
+    <string name="description_onboarding_1">Watch you favorite Jatra in a single click &amp; Ticket booking is available in online now, so for whom you are waiting for!</string>
+    <string name="skip">Skip</string>
+
+</resources>
