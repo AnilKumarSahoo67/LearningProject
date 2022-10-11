@@ -1,6 +1,7 @@
 package com.iserveu.learningproject
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.drawable.ColorDrawable
@@ -38,6 +39,9 @@ class MovieDetailsActivity : AppCompatActivity() {
 //                    }
 //                }
 //            })
+        binding.btnContinue.setOnClickListener {
+            startActivity(Intent(this,BookingActivity::class.java))
+        }
 
         val castAdapter = CastProfileAdapter()
         binding.recyclerCast.adapter = castAdapter

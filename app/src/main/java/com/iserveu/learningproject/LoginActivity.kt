@@ -15,8 +15,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
-        setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,false)
-//        window.statusBarColor = Color.TRANSPARENT
+//        setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,false)
+        window.statusBarColor = 0xFF81C784.toInt()
 
         binding.btnSignin.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
