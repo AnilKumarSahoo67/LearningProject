@@ -6,12 +6,10 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
-import android.widget.HorizontalScrollView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.marginStart
 import androidx.core.view.setPadding
 import androidx.databinding.DataBindingUtil
 import com.iserveu.learningproject.databinding.ActivityBookingBinding
@@ -21,6 +19,9 @@ class BookingActivity : AppCompatActivity(),View.OnClickListener {
     lateinit var binding : ActivityBookingBinding
     private var layout : ViewGroup?=null
     private var seatViewList = arrayListOf<TextView>()
+    private var slasCount = 0
+    private var underScoreCount = 0
+    private var relativeStartingId = 0
     companion object{
         const val seatGaping = 7
         const val seatSize = 70
@@ -113,6 +114,7 @@ class BookingActivity : AppCompatActivity(),View.OnClickListener {
         for (element in seats){
             when(element){
                 '/'->{
+                    slasCount++
                     linearLayout = LinearLayout(this)
                     linearLayout.orientation = LinearLayout.HORIZONTAL
                     layoutSeat.addView(linearLayout)
@@ -172,6 +174,9 @@ class BookingActivity : AppCompatActivity(),View.OnClickListener {
                     view.setOnClickListener(this)
                 }
                 '_'->{
+                    if (slasCount==1){
+                        underScoreCount++
+                    }
                     val view = TextView(this)
                     val layoutParams = LinearLayout.LayoutParams(seatSize, seatSize)
                     layoutParams.setMargins(seatGaping, seatGaping, seatGaping, seatGaping)
@@ -248,6 +253,22 @@ class BookingActivity : AppCompatActivity(),View.OnClickListener {
                 }
             }
         }
+
+
+//        val relativeLayout = RelativeLayout(this)
+//        val relativeParam : RelativeLayout.LayoutParams = RelativeLayout.LayoutParams(underScoreCount* seatSize,(slasCount-17)* seatSize)
+//        relativeParam.setMargins(8* seatSize, seatSize,0,0)
+//        relativeLayout.layoutParams= relativeParam
+//        relativeLayout.gravity = Gravity.CENTER
+//        relativeLayout.setPadding(seatGaping, seatGaping, seatGaping, seatGaping)
+//        relativeLayout.setBackgroundColor(Color.parseColor("#405467"))
+//
+//
+//        layout?.addView(relativeLayout)
+
+
+
+
 
     }
 
